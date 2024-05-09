@@ -259,6 +259,10 @@ function! s:suite.OneArgument_GetSolidityIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.sol'), 'ﲹ')
 endfunction
 
+function! s:suite.OneArgument_GetSvelteIcon()
+  call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.svelte'), '')
+endfunction
+
 function! s:suite.OneArgument_GetGoIcon()
   call s:assert.equals(WebDevIconsGetFileTypeSymbol('test.go'), '')
 endfunction
