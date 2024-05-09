@@ -286,6 +286,7 @@ function! s:setDictionaries()
         \ 'r'        : 'ﳒ',
         \ 'rproj'    : '鉶',
         \ 'sol'      : 'ﲹ',
+        \ 'svelte'   : '',
         \ 'pem'      : ''
         \}
 
