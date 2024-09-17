@@ -82,6 +82,7 @@ call s:set('g:WebDevIconsTabAirLineAfterGlyphPadding', '')
 
 call s:set('g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol', '')
 call s:set('g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol', '')
+call s:set('g:WebDevIconsNoEndOfLineDefaultSymbol', '')
 call s:set('g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol', g:DevIconsEnableFoldersOpenClose ? '' : '')
 call s:set('g:WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol',  '')
 call s:set('g:DevIconsDefaultFolderOpenSymbol', '')
@@ -565,9 +566,14 @@ endfunction
 function! WebDevIconsGetFileFormatSymbol(...)
   let fileformat = ''
   let bomb = ''
+  let noeolf = ''
 
   if (&bomb && g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol !=? '')
     let bomb = g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol . ' '
+  endif
+
+  if (!&eol && g:WebDevIconsNoEndOfLineDefaultSymbol !=? '')
+    let noeolf = g:WebDevIconsNoEndOfLineDefaultSymbol . ' '
   endif
 
   if &fileformat ==? 'dos'
@@ -580,7 +586,7 @@ function! WebDevIconsGetFileFormatSymbol(...)
 
   let artifactFix = s:DevIconsGetArtifactFix()
 
-  return bomb . fileformat . artifactFix
+  return bomb . noeolf . fileformat . artifactFix
 endfunction
 
 " for airline plugin {{{3
