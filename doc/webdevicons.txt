@@ -651,7 +651,13 @@ Character Mappings ~
   " set a byte character marker (BOM) utf-8 symbol when retrieving file encoding
   " disabled by default with no value
   let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
-<
+
+
+
+  " set a noendofline symbol when retrieving file format
+  " disabled by default with no value
+  let g:WebDevIconsNoEndOfLineDefaultSymbol = '󰭜'
+
 
 >
   " enable folder/directory glyph flag (disabled by default with 0)
