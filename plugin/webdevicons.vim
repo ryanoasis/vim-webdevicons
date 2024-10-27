@@ -286,7 +286,9 @@ function! s:setDictionaries()
         \ 'r'        : 'ﳒ',
         \ 'rproj'    : '鉶',
         \ 'sol'      : 'ﲹ',
-        \ 'pem'      : ''
+        \ 'pem'      : '',
+        \ 'scheme'   : '',
+        \ 'lisp'     : '',
         \}
 
   let s:file_node_exact_matches = {
